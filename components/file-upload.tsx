@@ -34,6 +34,10 @@ export function FileUpload({ onChange, value, endpoint }: FileUploadProps) {
 			endpoint={endpoint}
 			onClientUploadComplete={res => onChange(res?.[0].url)}
 			onUploadError={(error: Error) => console.error(error.message)}
+			appearance={{
+				label: "text-indigo-500",
+				button: "ut-uploading:cursor-not-allowed bg-indigo-500 after:bg-indigo-700",
+			}}
 		/>
 	);
 }
