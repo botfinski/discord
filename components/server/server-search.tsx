@@ -26,6 +26,24 @@ type ServerSearchProps = {
 	}[];
 };
 
+const KeyboardIcons = () => {
+	if (navigator.userAgent.includes("Mac")) {
+		return (
+			<>
+				<span className="text-xs">&#8984;</span>
+				<span className="text-sm">K</span>
+			</>
+		);
+	} else {
+		return (
+			<>
+				<span className="text-xs">Ctrl</span>
+				<span className="text-sm">K</span>
+			</>
+		);
+	}
+};
+
 export const ServerSearch = ({ data }: ServerSearchProps) => {
 	const [open, setOpen] = useState(false);
 	const router = useRouter();
@@ -67,8 +85,7 @@ export const ServerSearch = ({ data }: ServerSearchProps) => {
 					Search
 				</p>
 				<kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground ml-auto">
-					<span className="text-xs">Ctrl</span>
-					<span className="text-sm">K</span>
+					<KeyboardIcons />
 				</kbd>
 			</button>
 			<CommandDialog open={open} onOpenChange={setOpen}>
