@@ -27,20 +27,22 @@ type ServerSearchProps = {
 };
 
 const KeyboardIcons = () => {
-	if (navigator.userAgent.includes("Mac")) {
-		return (
-			<>
-				<span className="text-xs">&#8984;</span>
-				<span className="text-sm">K</span>
-			</>
-		);
-	} else {
-		return (
-			<>
-				<span className="text-xs">Ctrl</span>
-				<span className="text-sm">K</span>
-			</>
-		);
+	if (typeof window !== "undefined") {
+		if (navigator && navigator.userAgent.includes("Mac")) {
+			return (
+				<>
+					<span className="text-xs">&#8984;</span>
+					<span className="text-sm">K</span>
+				</>
+			);
+		} else {
+			return (
+				<>
+					<span className="text-xs">Ctrl</span>
+					<span className="text-sm">K</span>
+				</>
+			);
+		}
 	}
 };
 
