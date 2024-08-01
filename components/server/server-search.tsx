@@ -27,7 +27,13 @@ type ServerSearchProps = {
 };
 
 const KeyboardIcons = () => {
-	if (typeof window !== "undefined") {
+	const [isClient, setIsClient] = useState(false);
+
+	useEffect(() => {
+		setIsClient(true);
+	}, []);
+
+	if (isClient) {
 		if (navigator && navigator.userAgent.includes("Mac")) {
 			return (
 				<>
