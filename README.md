@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h3 align="center">Fullstack Discord Clone</h3>
 
-## Getting Started
+## <a name="introduction">💬 Introduction</a>
 
-First, run the development server:
+A Discord Clone web application built on Next.js replicates the core functionalities of Discord, offering real-time communication, collaboration, and community building. This app allows users to create and join servers, create different channels within those servers, participate in text and video chats, and share media within different members or groups.
+
+## <a name="tech-stack">⚙️ Tech Stack</a>
+
+- Next.js
+- Typescript
+- TailwindCSS
+- Shadcn/ui
+- Socket.io
+- MongoDB
+- Prisma
+- LiveKit
+
+## <a name="features">🎨 Features</a>
+
+🎯 **User Authentication**: Users can sign up, log in, and manage their accounts with ease using Clerk
+
+🎯 **Real-Time Messaging**: Powered by socket.io, users can send and receive messages instantly, with updates pushed in real-time to all participants in a channel
+
+🎯 **Servers and Channels**: Users can create and join multiple servers, with the ability to create individual channels within each server for specific topics or groups
+
+🎯 **Direct Messaging**: Beyond group channels, the app supports one-on-one direct messaging between users.
+
+🎯 **Audio/Video Channels**: Users can join dedicated audio and video channels within a server for real-time voice and video communication
+
+🎯 **User Roles**: The platform supports multiple user roles, such as user, moderator, and admin, each with distinct permissions
+
+🎯 **Media Sharing**: Users can upload and share images and files within chats
+
+## <a name="quick-start">✔️ Installation</a>
+
+Follow these steps to set up the project locally on your machine.
+
+**Installation**
+
+Install the project dependencies using npm:
+
+```bash
+npm install
+```
+
+**Set Up Environment Variables**
+
+Create a new file named `.env` in the root of your project and add the following content:
+
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+DATABASE_URL=
+UPLOADTHING_SECRET=
+UPLOADTHING_APP_ID=
+LIVEKIT_API_KEY=
+LIVEKIT_API_SECRET=
+NEXT_PUBLIC_LIVEKIT_URL=
+```
+
+Replace the empty values with your actual credentials.
+
+**Running the Project**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
